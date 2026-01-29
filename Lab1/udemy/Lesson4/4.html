@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slack Profile Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f6f6f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .profile-card {
+      width: 320px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+
+    .profile-top {
+      height: 120px;
+      background-image: url('img/placeholder.svg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .profile-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-body h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .profile-body h2 {
+      margin: 6px 0 10px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    .profile-bio {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 18px;
+    }
+
+    .profile-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .profile-action {
+      width: 48%;
+      padding: 10px 0;
+      border: none;
+      border-radius: 4px; 
+      background: #1264a3;
+      color: white;
+      cursor: pointer; 
+      font-family: inherit; 
+    }
+
+    .profile-action:hover {
+      background: #0b4f86;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+  <div class="profile-top"></div>
+
+  <div class="profile-body">
+    <h1>Jane Doe</h1>
+    <h2>Student</h2>
+    <p class="profile-bio"> Learning web development and building cool projects.</p>
+    <div class="profile-actions">
+      <button class="profile-action">Message</button>
+      <button class="profile-action">Call</button>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>

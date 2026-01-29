@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    #title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    .category-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      width: 300px;
+      text-align: left;
+    }
+
+    li {
+      font-size: 18px;
+      color: #00a651; 
+      margin: 8px 0;
+    }
+
+    .done {
+      color: #ff3b30;
+      text-decoration: line-through;
+    }
+
+    li::before {
+      content: "○";
+      margin-right: 8px;
+      color: #00a651;
+    }
+
+    .done::before {
+      content: "○";
+      color: #ff3b30;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">My To-Do List</h1>
+
+  <h2 class="category-title">Chores</h2>
+  <ul id="chores">
+    <li class="completed">load the dishwasher</li>
+    <li class="completed">vacuum living room</li>
+    <li class="completed">take out garbage</li>
+    <li class="completed done">sweep the garage</li>
+  </ul>
+
+  <h2 class="category-title">Homework</h2>
+  <ul id="homework">
+    <li class="completed">brainstorm ideas for Science project</li>
+    <li class="completed">finish Calculus 2 problems</li>
+    <li class="completed">study for Programming midterm :P</li>
+    <li class="completed">finish Project 0 on Udacity FEND</li>
+    <li class="completed done">find sources for Biology research paper</li>
+    <li class="completed">read first two chapters of The Art of War</li>
+  </ul>
+
+  <h2 class="category-title">Party</h2>
+  <ul id="party">
+    <li class="completed">send out invitations</li>
+    <li class="completed">reserve party room at restaurant</li>
+    <li class="completed">order the cake!</li>
+  </ul>
+
+</body>
+</html>
