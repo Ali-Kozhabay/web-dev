@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instagram Login - Task 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="ig-page">
+      <section class="ig-hero" aria-labelledby="ig-hero-title">
+        <div class="ig-brand" aria-hidden="true">
+          <span class="ig-icon"></span>
+        </div>
+        <h1 id="ig-hero-title">
+          See everyday moments from your
+          <span class="highlight">close friends.</span>
+        </h1>
+        <div class="story-collage">
+          <img
+            class="collage-image"
+            src="../images/instagram-collage.png"
+            alt="Instagram story collage with friends"
+          />
+        </div>
+      </section>
+
+      <div class="ig-divider" aria-hidden="true"></div>
+
+      <section class="ig-panel" aria-label="Login">
+        <div class="card login-card">
+          <div class="login-header">
+            <span class="back-arrow" aria-hidden="true"></span>
+            <h2>Log into Instagram</h2>
+          </div>
+
+          <form class="login-form" action="#" method="post">
+            <div class="field">
+              <label class="sr-only" for="ig-username">Username, email, or phone</label>
+              <input
+                id="ig-username"
+                name="username"
+                type="text"
+                autocomplete="username"
+                placeholder="Mobile number, username or email"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label class="sr-only" for="ig-password">Password</label>
+              <input
+                id="ig-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Log in</button>
+          </form>
+
+          <a class="forgot-link" href="#">Forgot password?</a>
+
+          <button class="btn btn-outline btn-facebook" type="button">
+            Log in with Facebook
+          </button>
+          <button class="btn btn-outline btn-create" type="button">Create new account</button>
+
+          <p class="meta-text">Meta</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ig-footer">
+      <nav aria-label="Instagram links">
+        <ul class="footer-links">
+          <li><a href="#">Meta</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Instagram Lite</a></li>
+          <li><a href="#">Meta AI</a></li>
+          <li><a href="#">Threads</a></li>
+          <li><a href="#">Contact Uploading &amp; Non-Users</a></li>
+          <li><a href="#">Meta Verified</a></li>
+        </ul>
+      </nav>
+      <p class="footer-meta">English · © 2026 Instagram from Meta</p>
+    </footer>
+  </body>
+</html>
