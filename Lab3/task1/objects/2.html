@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check for emptiness</title>
+</head>
+<body>
+
+<script>
+    function isEmpty(obj) {
+        for (let key in obj) {
+            return false;
+        }
+        return true;
+    }
+
+    let schedule = {};
+
+    alert(isEmpty(schedule)); // true
+
+    schedule["8:30"] = "get up";
+
+    alert(isEmpty(schedule)); // false
+</script>
+
+</body>
+</html>

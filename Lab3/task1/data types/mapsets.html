@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let set = new Set();
+
+            let john = { name: "John" };
+            let pete = { name: "Pete" };
+            let mary = { name: "Mary" };
+
+            set.add(john);
+            set.add(pete);
+            set.add(mary);
+            set.add(john);
+            set.add(mary);
+
+            alert( set.size ); // 3
+
+            for (let user of set) {
+                alert(user.name); // John (then Pete and Mary)
+                }
+
+                //map
+                let map = new Map();
+
+                map.set("name", "John");
+
+                let keys = Array.from(map.keys());
+
+                alert(keys); // name
+        </script>
+    </body>
+</html>

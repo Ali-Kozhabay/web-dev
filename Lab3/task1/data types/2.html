@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function ucFirst(str) {
+                if (!str) return str;
+
+                return str[0].toUpperCase() + str.slice(1);
+                }
+
+                alert( ucFirst("john") ); // John
+
+                //check spam
+                function checkSpam(str) {
+                    let lowerStr = str.toLowerCase();
+
+                    return lowerStr.includes('aaaaaa') || lowerStr.includes('bbb');
+                    }
+
+                    alert( checkSpam('buy AaAaA now') );
+                    alert( checkSpam('free bbbbbb') );
+                    alert( checkSpam("rrrrrrrr") );
+
+                    //truncation
+                    function truncate(str, maxlength) {
+                        return (str.length > maxlength) ?
+                            str.slice(0, maxlength - 1) + '…' : str;
+                        }
+                    //extract currency
+                    function extractCurrencyValue(str) {
+                        return +str.slice(1);
+                        }
+        </script>
+    </body>
+</html>
