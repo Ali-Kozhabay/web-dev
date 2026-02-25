@@ -1,0 +1,30 @@
+:root {
+  --page-bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-soft: #f8fafd;
+  --text-main: #242d3a;
+  --text-muted: #6b7786;
+  --border: #e1e5ea;
+  --kaspi-red: #ed4c3d;
+  --brand: #2f86cc;
+  --shadow: 0 6px 18px rgba(31, 45, 61, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+  background: var(--page-bg);
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+}

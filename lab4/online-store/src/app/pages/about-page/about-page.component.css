@@ -1,0 +1,21 @@
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  line-height: 1.55;
+}
+
+.about-card h1 {
+  margin-top: 0;
+}
+
+.about-card ul {
+  margin: 0.7rem 0;
+  padding-left: 1.2rem;
+}
+
+.about-card a {
+  color: var(--brand);
+}

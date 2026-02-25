@@ -1,0 +1,169 @@
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  min-height: 100%;
+}
+
+.image-block {
+  position: relative;
+  padding: 0.9rem;
+}
+
+.main-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+}
+
+.deal-badge {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  background: #f24f43;
+  color: #fff;
+  border-radius: 14px;
+  font-size: 0.87rem;
+  padding: 0.2rem 0.55rem;
+  font-weight: 700;
+}
+
+.gallery-controls {
+  margin-top: 0.55rem;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.arrow {
+  border: 0;
+  border-radius: 4px;
+  background: #f3f6fa;
+  color: #5c6777;
+  height: 28px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.thumb {
+  border: 1px solid #d5dbe4;
+  border-radius: 3px;
+  padding: 0;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb.active {
+  border-color: #2f86cc;
+}
+
+.content {
+  padding: 0 0.9rem 0.9rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.title {
+  margin: 0;
+  text-decoration: none;
+  color: #1176c0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.description {
+  margin: 0;
+  color: #6d7886;
+  line-height: 1.35;
+  font-size: 0.9rem;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.08rem;
+}
+
+.star {
+  color: #d8dfe8;
+  font-size: 0.94rem;
+  line-height: 1;
+}
+
+.star.filled {
+  color: #f24f43;
+}
+
+.reviews {
+  color: #1176c0;
+  font-size: 0.9rem;
+}
+
+.price-row {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #1d2430;
+}
+
+.installment {
+  margin: 0;
+  color: #606d7d;
+  font-size: 0.88rem;
+}
+
+.share-row {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.share-row button {
+  border: 1px solid #d5dbe4;
+  background: #fff;
+  color: #1b75bc;
+  border-radius: 4px;
+  min-height: 30px;
+  padding: 0 0.6rem;
+  font-size: 0.83rem;
+  cursor: pointer;
+}
+
+.share-row button:hover {
+  border-color: #2f86cc;
+}

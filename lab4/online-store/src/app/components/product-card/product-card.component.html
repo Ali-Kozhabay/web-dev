@@ -1,0 +1,52 @@
+<article class="card">
+  <div class="image-block">
+    <span class="deal-badge">0•0•12</span>
+    <a [href]="product().link" target="_blank" rel="noopener noreferrer">
+      <img class="main-image" [src]="currentImage()" [alt]="product().name" loading="lazy" />
+    </a>
+
+    @if (galleryImages().length > 1) {
+      <div class="gallery-controls">
+        <button type="button" class="arrow" (click)="previousImage()" aria-label="Previous image">&lsaquo;</button>
+        <div class="thumbnails">
+          @for (img of galleryImages(); track img; let idx = $index) {
+            <button
+              type="button"
+              class="thumb"
+              [class.active]="idx === selectedImageIndex()"
+              (click)="setImage(idx)"
+              [attr.aria-label]="'Select image ' + (idx + 1)"
+            >
+              <img [src]="img" [alt]="product().name + ' image ' + (idx + 1)" loading="lazy" />
+            </button>
+          }
+        </div>
+        <button type="button" class="arrow" (click)="nextImage()" aria-label="Next image">&rsaquo;</button>
+      </div>
+    }
+  </div>
+
+  <div class="content">
+    <a class="title" [href]="product().link" target="_blank" rel="noopener noreferrer">{{ product().name }}</a>
+    <p class="description">{{ product().description }}</p>
+
+    <div class="rating-row" [attr.aria-label]="'Rating: ' + product().rating">
+      <div class="stars">
+        @for (star of starIndexes; track star) {
+          <span class="star" [class.filled]="star <= roundedRating()">★</span>
+        }
+      </div>
+      <span class="reviews">({{ pseudoReviewCount() }} отзывов)</span>
+    </div>
+
+    <div class="price-row">
+      <p class="price">{{ product().price | number: '1.0-0' }} ₸</p>
+      <p class="installment">в рассрочку {{ installmentAmount() | number: '1.0-0' }} ₸ ×3</p>
+    </div>
+
+    <div class="share-row">
+      <button type="button" (click)="shareOn('whatsapp')">WhatsApp</button>
+      <button type="button" (click)="shareOn('telegram')">Telegram</button>
+    </div>
+  </div>
+</article>

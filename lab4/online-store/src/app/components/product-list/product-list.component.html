@@ -1,0 +1,90 @@
+<section class="market-layout">
+  <aside class="sidebar">
+    <a class="all-categories" href="#">
+      Все категории
+      <span>(1440840)</span>
+    </a>
+
+    <h2>
+      Телефоны и гаджеты
+      <span>(1440840)</span>
+    </h2>
+
+    <ul class="category-list">
+      @for (category of sidebarCategories; track category.name) {
+        <li>
+          <a href="#">{{ category.name }}</a>
+          <span>({{ category.count }})</span>
+        </li>
+      }
+    </ul>
+
+    <h3>Цена</h3>
+
+    <div class="price-list">
+      <label class="price-item">
+        <input
+          type="radio"
+          name="price-range"
+          [checked]="selectedPriceRangeId() === 'all'"
+          (change)="selectPriceRange('all')"
+        />
+        <span>Любая цена</span>
+      </label>
+
+      @for (priceRange of priceRanges; track priceRange.id) {
+        <label class="price-item">
+          <input
+            type="radio"
+            name="price-range"
+            [checked]="selectedPriceRangeId() === priceRange.id"
+            (change)="selectPriceRange(priceRange.id)"
+          />
+          <span>{{ priceRange.label }}</span>
+          <small>({{ priceRange.count }})</small>
+        </label>
+      }
+    </div>
+  </aside>
+
+  <section class="catalog-zone">
+    <header class="toolbar">
+      <p class="breadcrumb">Kaspi Магазин → Телефоны и гаджеты в Алматы</p>
+
+      <div class="toolbar-controls">
+        <input
+          #queryInput
+          type="search"
+          class="search"
+          [value]="searchValue()"
+          (input)="onSearch(queryInput.value)"
+          placeholder="Поиск по каталогу"
+          aria-label="Поиск по каталогу"
+        />
+
+        <select #sortSelect [value]="sortMode()" (change)="setSortMode(sortSelect.value)" aria-label="Сортировка">
+          <option value="popular">Популярные</option>
+          <option value="ratingDesc">По рейтингу</option>
+          <option value="priceAsc">Цена: по возрастанию</option>
+          <option value="priceDesc">Цена: по убыванию</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="result-row">
+      <p>Найдено товаров: <strong>{{ visibleProducts().length }}</strong></p>
+
+      @if (searchValue() || selectedPriceRangeId() !== 'all' || sortMode() !== 'popular') {
+        <button type="button" (click)="clearFilters()">Сбросить фильтры</button>
+      }
+    </div>
+
+    <div class="products-grid">
+      @for (product of visibleProducts(); track product.id) {
+        <app-product-card [product]="product" (share)="onShare($event)"></app-product-card>
+      } @empty {
+        <p class="empty-state">По выбранным параметрам ничего не найдено.</p>
+      }
+    </div>
+  </section>
+</section>

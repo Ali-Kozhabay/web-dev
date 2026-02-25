@@ -1,0 +1,46 @@
+<div class="shell">
+  <header class="market-header">
+    <div class="top-row container">
+      <div class="logo-group">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="logo-text">Kaspi.kz</span>
+      </div>
+
+      <nav class="top-links">
+        <a href="#">Клиентам</a>
+        <a href="#">Бизнесу</a>
+        <a href="#">Kaspi Гид</a>
+        <a routerLink="/about" routerLinkActive="active-link">О проекте</a>
+      </nav>
+    </div>
+
+    <div class="search-row container">
+      <button class="store-tab active" type="button">Магазин</button>
+      <input type="text" placeholder="Поиск товара" aria-label="Поиск товара" />
+      <button class="search-btn" type="button" aria-label="Найти">🔍</button>
+
+      <p class="city">
+        Мой город:
+        <a href="#">Алматы</a>
+      </p>
+    </div>
+
+    <nav class="category-row container">
+      <a routerLink="/products" routerLinkActive="active-category" [routerLinkActiveOptions]="{ exact: true }">
+        ВСЕ КАТЕГОРИИ
+      </a>
+      <a href="#">ТЕЛЕФОНЫ И ГАДЖЕТЫ</a>
+      <a href="#">БЫТОВАЯ ТЕХНИКА</a>
+      <a href="#">ТВ, АУДИО, ВИДЕО</a>
+      <a href="#">КОМПЬЮТЕРЫ</a>
+      <a href="#">МЕБЕЛЬ</a>
+      <a href="#">КРАСОТА, ЗДОРОВЬЕ</a>
+      <a href="#">ДЕТСКИЕ ТОВАРЫ</a>
+      <a href="#">АПТЕКА</a>
+    </nav>
+  </header>
+
+  <main class="content container">
+    <router-outlet></router-outlet>
+  </main>
+</div>
